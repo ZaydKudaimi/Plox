@@ -30,21 +30,30 @@
         <ul>
          
          <li>
-             <form action="/logout" method="POST">
+              <form action="home.jsp" method="POST">
              
                  <div class="logout-btn">
                      <input type="submit" style="background-color: hsl(351, 4%, 66%)"
-                         value=" LogOut "></button>
+                         value=" LogOut ">
                  </div>        
-             </form>
+             </form>    
          </li>
+          <li>
+         <form action="dashboard.jsp" method="POST">
+             
+                 <div class="Home-btn">
+                     <input type="submit" style="background-color: hsl(351, 4%, 66%)"
+                         value="HOME ">
+                 </div>        
+             </form>   
+          </li>
         </ul>
  <div class="dropdown">
           <button class="dropbtn"> <b>REPORT</b> 
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="dashboard.jsp">MASTER REPORT</a>
+            <a href="master.jsp">MASTER REPORT</a>
             <a href="renting.jsp">RENTING REPORT</a>
             <a href="renthangar.jsp">LISTING REPORT</a>
           </div>
@@ -59,16 +68,16 @@
     </div>
 
 
+	<br><br><h3 class ="center"> Search Hangars</h3><br><br>
 
-	<h2>Find Hangar</h2>
-	
+	<div class="search">
 	<form action="" method="post" id="hangarSearch" >
   	
   	<input type="text" id="search" name="search" placeholder="Search">
 
   	<input type="submit" value="Submit" id="submitBtn">
 </form>
-
+</div><br><br>
 
 <table class="greenTable" border="1">
 <tr>
@@ -104,7 +113,7 @@
  		java.sql.Connection con; 
  		Class.forName("com.mysql.jdbc.Driver"); 
  		ResultSet res1;
- 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Plox?autoReconnect=true&useSSL=false", "root", "Root123@");
+ 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Plox?autoReconnect=true&useSSL=false", "root", "0906clcl");
  		Statement stmt = con.createStatement();
  		
  		
@@ -161,7 +170,7 @@
 	</div>
 	
 	
-	<a href="dashboard.jsp"><button>Back</button></a>
+<!-- 	<a href="dashboard.jsp"><button>Back</button></a> -->
 	<br>
 	
 	
@@ -218,6 +227,11 @@
  		}catch(SQLException e) { 
  			out.println("SQLException caught: " +e.getMessage()); 
  		}  %>
+ 		<div id="wrapper">
+      <div>
+        <br><br><br><br><br><br><br><br><p1><b> Plox 2022</b></p1>
+      </div>
+    </div>
 </body>
 
 

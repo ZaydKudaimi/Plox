@@ -4,7 +4,7 @@ class MysqlCon{
 	public static void main(String args[]){
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false","root","Root123@");
+			Connection con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false","root","0906clcl");
 					
 					Statement stmt=con.createStatement();
 					ResultSet rs=stmt.executeQuery("select * from plox.renting");

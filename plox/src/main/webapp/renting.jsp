@@ -15,7 +15,7 @@
     ></script>
   </head>
 
-<body style="background-color:antiquewhite;">
+
 <nav>
       <div class="nav-left">
         <img src="plox_name3.png" class="logo" />
@@ -31,14 +31,23 @@
         <ul>
          
          <li>
-             <form action="/logout" method="POST">
+              <form action="home.jsp" method="POST">
              
                  <div class="logout-btn">
                      <input type="submit" style="background-color: hsl(351, 4%, 66%)"
-                         value=" LogOut "></button>
+                         value=" LogOut ">
                  </div>        
-             </form>
+             </form>    
          </li>
+          <li>
+         <form action="dashboard.jsp" method="POST">
+             
+                 <div class="Home-btn">
+                     <input type="submit" style="background-color: hsl(351, 4%, 66%)"
+                         value="HOME ">
+                 </div>        
+             </form>   
+          </li>
         </ul>
         
         <div class="dropdown">
@@ -58,7 +67,7 @@
     <div class="container">
       <div class="main-content"></div>
     </div>
-<h2 class ="center">Renting Report For Hangar Owners</h2>
+<br><br><h3 class ="center">Renting Report For Hangar Owners</h3><br><br>
 
 <table style="width: 100%;" class="greenTable" border="1">
              <tr>
@@ -82,7 +91,7 @@
  	try { 
 		java.sql.Connection con; 
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
-		con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false", "root", "Root123@");
+		con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false", "root", "0906clcl");
 		Statement stmt = con.createStatement();
 		int accountId = -1;
 		ResultSet res1 = stmt.executeQuery("SELECT accountId FROM plox.account WHERE accountId=" + session.getAttribute("sessId") + "");
@@ -151,7 +160,7 @@
   
 	<div id="wrapper">
       <div>
-        <p1><b> Plox 2022</b></p1>
+        <br><br><br><br><br><br><br><br><p1><b> Plox 2022</b></p1>
       </div>
     </div>
   </body>

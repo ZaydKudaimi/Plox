@@ -29,7 +29,7 @@
 
         <ul>
           <li>
-             <form action="/lognin" method="POST">
+             <!-- <form action="/lognin" method="POST">
                  
                  
                  <div class="login-btn">
@@ -38,16 +38,20 @@
                      
                  </div>
              
-             </form>
+             </form> -->
          </li>
          <li>
-             <form action="/logout" method="POST">
+         
              
-                 <div class="logout-btn">
-                     <input type="submit" style="background-color: hsl(351, 4%, 66%)"
-                         value=" LogOut "></button>
-                 </div>        
-             </form>
+             
+             
+            <!--  <a href="dashboard.jsp"><button>Back</button></a> -->
+             
+             
+             
+             
+             
+             
          </li>
         </ul>
  <div class="dropdown">
@@ -66,22 +70,41 @@
     </nav>
 
     <div class="container">
-      <div class="main-content"></div>
+      <div class="main-content">
+      
+      <!-- <form name="loginForm" id="loginId" method="post" action="session.jsp"  >
+  <fieldset>
+    <label>LOGIN</label><br>
+    
+    <label for="email">EMAIL  : </label>
+    <input id="email" type="text" name="email" />
+    <br>
+    <label for="password">PASSWORD :</label>
+    <input id="password" type="password" name="password" />
+    <br>
+    <input type="submit" value="Login" ></input><br>
+  </fieldset>
+ </form> -->
+ 
+ 
+ <div class="login-page">
+  <div class="form">
+    
+    <form name="loginform" id="loginId" method="post" action="session.jsp">
+      <input id="email" type="text" name="email" placeholder="username"/>
+      <input id="password" type="password" name="pssword" placeholder="password"/>
+      <input type="submit" value="Login"></input>
+      
+    </form>
+  </div>
+</div>
+ 
+ 
+      </div>
     </div>
 
     <script src="script.js"></script>
-<form name="loginForm" id="loginId" method="post" action="session.jsp"  >
-  <fieldset>
-    <legend>Login</legend>
-    <label for="email">Email  : </label>
-    <input id="email" type="text" name="email" />
-    <br />
-    <label for="password">Password :</label>
-    <input id="password" type="password" name="password" />
-    <br />
-    <input type="submit" value="Login" ></input>
-  </fieldset>
- </form>
+ 
 
 
 <p style="font-weight: bold; color: red;">
@@ -94,7 +117,7 @@
 	try { 
 		java.sql.Connection con; 
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
-		con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false", "root", "Root123@");
+		con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false", "root", "0906clcl");
 	
 		Statement stmt = con.createStatement();
 	
@@ -151,7 +174,7 @@
 
  <div id="wrapper">
       <div>
-        <p1><b> Plox 2022</b></p1>
+        <br><br><br><br><br><br><br><p1><b> Plox 2022</b></p1><br><br>
       </div>
     </div>
   </body>
