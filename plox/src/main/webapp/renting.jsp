@@ -91,10 +91,10 @@
  	try { 
 		java.sql.Connection con; 
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
-		con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Plox?autoReconnect=true&useSSL=false", "root", "0906clcl");
+		con = DriverManager.getConnection("jdbc:mysql://ploxfinaldb-do-user-13036958-0.b.db.ondigitalocean.com:25060/defaultdb?autoReconnect=true&useSSL=false", "doadmin", "AVNS_W5T6PFxSzJBltRHm6b4");
 		Statement stmt = con.createStatement();
 		int accountId = -1;
-		ResultSet res1 = stmt.executeQuery("SELECT accountId FROM plox.account WHERE accountId=" + session.getAttribute("sessId") + "");
+		ResultSet res1 = stmt.executeQuery("SELECT accountId FROM defaultdb.account WHERE accountId=" + session.getAttribute("sessId") + "");
 		
  		if(res1.next()) {
  			accountId = res1.getInt("accountId");
@@ -106,22 +106,7 @@
 	%>
 	
  			
-        <!-- <table style="width: 100%;" class="greenTable" border="1">
-             <tr>
-                <td>Hangar ID</td>
-                <td>Name</td>
-                <td>City</td>
-                <td>Address</td>
-                <td>Dimension</td>
-                <td>Enclosure type</td>
-                <td>Price</td>
-                <td>Duration</td>
-                <td>Heating</td>
-                <td>Water and Electricity</td>
-                <td>Technician</td>
-                <td>Rented By</td>
-                
-</tr> -->
+       
 	<% 
 
 	while (master.next()){

@@ -84,7 +84,7 @@
  	try { 
 		java.sql.Connection con; 
 		Class.forName("com.mysql.jdbc.Driver"); 
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Plox?autoReconnect=true&useSSL=false", "root", "Root123@");
+		con = DriverManager.getConnection("jdbc:mysql://ploxfinaldb-do-user-13036958-0.b.db.ondigitalocean.com:25060/defaultdb?autoReconnect=true&useSSL=false", "doadmin", "AVNS_W5T6PFxSzJBltRHm6b4");
 		Statement stmt = con.createStatement();
 		request.setAttribute("NAME", session.getAttribute("sessname"));
 		request.setAttribute("EMAIL", session.getAttribute("sessemail"));

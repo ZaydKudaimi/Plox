@@ -20,11 +20,11 @@ try {
 	java.sql.Connection con; 
 	Class.forName("com.mysql.jdbc.Driver"); 
 
-	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Plox?autoReconnect=true&useSSL=false", "root", "Root123@");
+	con = DriverManager.getConnection("jdbc:mysql://ploxfinaldb-do-user-13036958-0.b.db.ondigitalocean.com:25060/defaultdb?autoReconnect=true&useSSL=false", "doadmin", "AVNS_W5T6PFxSzJBltRHm6b4");
 
 	int accountId = -1;
 	Statement stmt = con.createStatement();
-	ResultSet res1 = stmt.executeQuery("SELECT accountId FROM plox.account WHERE accountId=" + session.getAttribute("sessId") + "");
+	ResultSet res1 = stmt.executeQuery("SELECT accountId FROM defaultdb.account WHERE accountId=" + session.getAttribute("sessId") + "");
 	while(res1.next()) {
 			accountId = res1.getInt("accountId");
 	stmt.executeUpdate("UPDATE Hangar SET Rented_By = '"+ accountId+"' WHERE Hangar_ID=" + hangarid + ";");

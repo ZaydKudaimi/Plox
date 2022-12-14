@@ -113,12 +113,12 @@
  		java.sql.Connection con; 
  		Class.forName("com.mysql.jdbc.Driver"); 
  		ResultSet res1;
- 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Plox?autoReconnect=true&useSSL=false", "root", "0906clcl");
+		con = DriverManager.getConnection("jdbc:mysql://ploxfinaldb-do-user-13036958-0.b.db.ondigitalocean.com:25060/defaultdb?autoReconnect=true&useSSL=false", "doadmin", "AVNS_W5T6PFxSzJBltRHm6b4");
  		Statement stmt = con.createStatement();
  		
  		
  		String defaultSearch = "SELECT * FROM Hangar;";
- 		String searchAvailable = "SELECT * FROM plox.Hangar WHERE Rented_BY IS NULL";
+ 		String searchAvailable = "SELECT * FROM defaultdb.Hangar WHERE Rented_BY IS NULL";
  		
  		if (searchFlag){
  			res1 = stmt.executeQuery("SELECT * FROM Hangar WHERE City='" + search + "' OR Address='" + search + "' AND Rented_BY IS NULL ;");
